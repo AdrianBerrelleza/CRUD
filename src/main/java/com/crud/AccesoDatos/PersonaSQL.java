@@ -31,7 +31,7 @@ public class PersonaSQL {
     }
 
     public boolean borrarPersona(int id) {
-        String sql = "DELETE FROM Personas WHERE idPersona = ?";
+        String sql = "DELETE FROM Personas WHERE id = ?";
         try(Connection conn = ConectDB.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
 
