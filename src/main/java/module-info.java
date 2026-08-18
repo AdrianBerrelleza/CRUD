@@ -1,10 +1,12 @@
 module com.example.crud {
-    requires javafx.controls;
-    requires javafx.fxml;
     requires java.sql;
     requires org.mariadb.jdbc;
+    requires javafx.controls;
+    requires javafx.fxml;
 
+    exports com.crud.GUi;
 
+    opens com.crud.GUi to javafx.fxml;
     opens com.example.crud to javafx.fxml;
-    exports com.crud;
+    opens com.crud.Logica to javafx.base;
 }

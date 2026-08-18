@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.crud.GUi.MainController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Nuevo" onAction="#onNuevo"/>
+            <Button text="Editar" onAction="#onEditar"/>
+            <Button text="Eliminar" onAction="#onEliminar"/>
+            <Button text="Refrescar" onAction="#onRefrescar"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaPersonas">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+                <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="280"/>
+                <TableColumn fx:id="colTelefonos" text="Teléfonos" prefWidth="280"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <Label fx:id="lblEstado" text="Listo.">
+            <padding>
+                <Insets top="6" right="10" bottom="6" left="10"/>
+            </padding>
+        </Label>
+    </bottom>
+</BorderPane>

@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class ConectDB {
 
-    private static final String url = "jdbc:mysql://localhost:3306/crud";
-    private static final String user = "usuario1";
-    private static final String password = "superpassword";
+    private static final String URL = "jdbc:mariadb://localhost:3306/agenda";
+    private static final String USER = "usuario1";
+    private static final String PASSWORD = "superpassword";
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url,user,password);
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
