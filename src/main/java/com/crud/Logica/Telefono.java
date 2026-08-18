@@ -32,4 +32,13 @@ public class Telefono {
     public void setPersonId(int personId) {
         this.personaId = personId;
     }
+
+    @Override
+    public String toString() {
+        return "Telefono{" +
+                "id=" + id +
+                ", numero='" + numero + '\'' +
+                ", personaId=" + personaId +
+                '}';
+    }
 }

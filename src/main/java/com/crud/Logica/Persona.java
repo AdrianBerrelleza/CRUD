@@ -44,4 +44,14 @@ public class Persona {
     public void addTelefono(Telefono telefono) {
         this.telefonos.add(telefono);
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", telefonos=" + telefonos +
+                '}';
+    }
 }
